@@ -9,7 +9,7 @@ services:
       - '5432'
 
   review-buddy:
-    image: '${DOCKER_IMAGE:-docker.io/ainacio/review-buddy:latest}'
+    image: '${DOCKER_IMAGE:-docker.io/aldosilva6/review-buddy:latest}'
     profiles: [ "app" ]
     depends_on:
       - postgres
