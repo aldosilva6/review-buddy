@@ -1,4 +1,4 @@
-package dev.aldosilva.review_buddy;
+package dev.aldosilva.reviewbuddy;
 
 import org.springframework.boot.SpringApplication;
 
