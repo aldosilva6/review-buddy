@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>dev.aldosilva</groupId>
 	<artifactId>review-buddy</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name/>
 	<description/>
 	<url/>
@@ -27,8 +27,11 @@
 		<url/>
 	</scm>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>25</java.version>
 		<spring-modulith.version>2.2.0-M1</spring-modulith.version>
+		<font_awesome.version>7.3.0</font_awesome.version>
+		<htmx.org.version>4.0.1</htmx.org.version>
 		<spotless-maven-plugin.version>3.11.0</spotless-maven-plugin.version>
 		<palantir-java-format.version>2.103.0</palantir-java-format.version>
 		<bootui.version>2.3.0</bootui.version>
@@ -37,6 +40,7 @@
 		<jacoco.minimum.coverage>40%</jacoco.minimum.coverage>
 		<archunit.version>1.5.1</archunit.version>
 		<taikai.version>2.8.0</taikai.version>
+		<dockerImageName>aldosilva6/review-buddy</dockerImageName>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -133,6 +137,24 @@
 			<groupId>org.springframework.modulith</groupId>
 			<artifactId>spring-modulith-runtime</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.modulith</groupId>
+			<artifactId>spring-modulith-docs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator-lite</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>${font_awesome.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>htmx.org</artifactId>
+			<version>${htmx.org.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -247,6 +269,18 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+						<name>${dockerImageName}</name>
+					</image>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

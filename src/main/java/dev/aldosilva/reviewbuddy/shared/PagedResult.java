@@ -1,19 +1,19 @@
 package dev.aldosilva.reviewbuddy.shared;
 
-import org.springframework.data.domain.Page;
-
 import java.util.List;
 import java.util.function.Function;
+import org.springframework.data.domain.Page;
 
 /**
  * Created by aldo on Nov, 2026
  */
-public record PagedResult<T>(List<T> data,
-                             int currentPageNo,
-                             int totalPages,
-                             long totalElements,
-                             boolean hasNextPage,
-                             boolean hasPreviousPage) {
+public record PagedResult<T>(
+        List<T> data,
+        int currentPageNo,
+        int totalPages,
+        long totalElements,
+        boolean hasNextPage,
+        boolean hasPreviousPage) {
     public static <T> PagedResult<T> from(Page<T> page) {
         return new PagedResult<>(
                 page.getContent(),
