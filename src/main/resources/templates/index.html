@@ -50,6 +50,55 @@
             </div>
         </div>
     </section>
+    <section class="bg-green-soft py-14">
+        <div class="mx-auto max-w-6xl px-5">
+            <div class="mb-8 flex flex-wrap items-end justify-between gap-3">
+                <h2 class="font-heading text-2xl font-bold">Recently reviewed products</h2>
+                <a th:href="@{/products}" class="font-semibold underline hover:text-grey">Browse all products →</a>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="flex flex-col overflow-hidden rounded-3xl border-2 border-black bg-white transition-shadow hover:shadow-[6px_6px_0_0_#000]">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&amp;fit=crop&amp;w=600&amp;h=320&amp;q=70" alt="Laptop showing a task board" class="h-36 w-full border-b-2 border-black object-cover"/>
+                    <div class="flex flex-1 flex-col gap-2 p-5">
+                        <h3 class="font-heading text-lg font-bold">TaskFlow</h3>
+                        <p class="text-sm text-grey">Minimalist task manager for small teams.</p>
+                        <div class="mt-1 flex items-center gap-1 text-sm">
+                            <span class="text-black" aria-hidden="true"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                            <span class="font-semibold">4.5</span>
+                            <span class="text-grey">(12)</span>
+                        </div>
+                        <a th:href="@{/products}" class="mt-auto pt-2 text-sm font-semibold underline">View product →</a>
+                    </div>
+                </article>
+                <article class="flex flex-col overflow-hidden rounded-3xl border-2 border-black bg-white transition-shadow hover:shadow-[6px_6px_0_0_#000]">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=600&amp;h=320&amp;q=70" alt="Monitoring dashboard on a screen" class="h-36 w-full border-b-2 border-black object-cover"/>
+                    <div class="flex flex-1 flex-col gap-2 p-5">
+                        <h3 class="font-heading text-lg font-bold">DevPulse</h3>
+                        <p class="text-sm text-grey">Uptime and performance monitoring for indie SaaS.</p>
+                        <div class="mt-1 flex items-center gap-1 text-sm">
+                            <span class="text-black" aria-hidden="true"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                            <span class="font-semibold">4.5</span>
+                            <span class="text-grey">(21)</span>
+                        </div>
+                        <a th:href="@{/products}" class="mt-auto pt-2 text-sm font-semibold underline">View product →</a>
+                    </div>
+                </article>
+                <article class="flex flex-col overflow-hidden rounded-3xl border-2 border-black bg-white transition-shadow hover:shadow-[6px_6px_0_0_#000]">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&amp;fit=crop&amp;w=600&amp;h=320&amp;q=70" alt="Typewriter and notebook on a desk" class="h-36 w-full border-b-2 border-black object-cover"/>
+                    <div class="flex flex-1 flex-col gap-2 p-5">
+                        <h3 class="font-heading text-lg font-bold">Inkwell</h3>
+                        <p class="text-sm text-grey">Distraction-free writing app for bloggers.</p>
+                        <div class="mt-1 flex items-center gap-1 text-sm">
+                            <span class="text-black" aria-hidden="true"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                            <span class="font-semibold">4.5</span>
+                            <span class="text-grey">(2)</span>
+                        </div>
+                        <a th:href="@{/products}" class="mt-auto pt-2 text-sm font-semibold underline">View product →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 </div>
 </body>
 </html>
